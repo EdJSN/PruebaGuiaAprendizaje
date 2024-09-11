@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <form>
+        <div>
+            <label for="nombre">Nombre</label><br>
+            <input type="text" name="nombre" placeholder="Ingrese su nombre" minlength="3" maxlength="20" required pattern="[A-Za-z]" id="nombre"><br>
+        </div>
+        <div>
+            <label for="apellidos">Apellidos</label><br>
+            <input type="text" name="apellidos" placeholder="Ingrese sus apellidos" minlength="3" maxlength="30" required pattern="[a-z]" id="apellidos"><br>
+        </div>
+        <div>
+            <label for="color">Color</label><br>
+            <input type="color" placeholder="Seleccione su color favorito" required><br>
+        </div>
+        <div>
+            <label for="edad">Edad</label><br>
+            <input type="number" id="edad" name="edad" placeholder="Ingrese su edad" required><br>
+        </div>
+        <div>
+            <label for="numeros">Números</label><br>
+            <input type="text" name="numeros" placeholder="Inserte su número de contacto" minlength="10" maxlength="30" required pattern="[0-9]"><br>
+        </div>
+        <div>
+            <label for="positivos">Positivos</label><br>
+            <input type="number" name="positivos" placeholder="Solo números positivos" min="1" required pattern="^[0-9]+" id="positivos"><br>
+        </div>
+        <div>
+            <label for="maximo_minimo">Máximo - Mínimo</label><br>
+            <input type="range" name="maximo_minimo" min="10" max="20" required step="0.5" id="maximo_minimo" value="15"><br>
+        </div>
+        <div>
+            <label for="fecha_de_nacimiento">Fecha de nacimiento</label><br>
+            <input type="date" name="fecha_de_nacimiento" placeholder="Seleccione su fecha de nacimiento" required id="fecha_de_nacimiento"><br>
+        </div>
+        <div>
+            <label for="hora">Hora</label><br>
+            <input type="time" name="hora" placeholder="Ingrese la hora de registro" required id="hora"><br>
+        </div>
+        
+    </form>
+    
+</body>
+</html>
+
