@@ -10,11 +10,11 @@
     <form>
         <div>
             <label for="nombre">Nombre</label><br>
-            <input type="text" name="nombre" placeholder="Ingrese su nombre" minlength="3" maxlength="20" required pattern="[A-Za-z]" id="nombre"><br>
+            <input type="text" name="nombre" placeholder="Ingrese su nombre" minlength="3" maxlength="20" required pattern="[A-Za-z]+" id="nombre"><br>
         </div>
         <div>
-            <label for="apellidos">Apellidos</label><br>
-            <input type="text" name="apellidos" placeholder="Ingrese sus apellidos" minlength="3" maxlength="30" required pattern="[a-z]" id="apellidos"><br>
+            <label for="apellido">Apellido</label><br>
+            <input type="text" name="apellido" placeholder="Ingrese su apellido" minlength="3" maxlength="30" required pattern="[a-z]+" id="apellido"><br>
         </div>
         <div>
             <label for="color">Color</label><br>
@@ -26,7 +26,7 @@
         </div>
         <div>
             <label for="numeros">Números</label><br>
-            <input type="text" name="numeros" id="numeros" placeholder="Inserte su número de contacto" minlength="10" maxlength="30" required pattern="[0-9]" accept="[0-9]"><br>
+            <input type="text" name="numeros" id="numeros" placeholder="Inserte su número de contacto" minlength="10" maxlength="30" required pattern="\d+"><br>
         </div>
         <div>
             <label for="positivos">Positivos</label><br>
@@ -61,7 +61,7 @@
         </div>
         <div>
             <label for="genero">Género</label><br>
-            <input type="radio" name="genero" id="hombre">
+            <input type="radio" name="genero" id="hombre" checked>
             <label for="hombre">Hombre</label><br>
             <input type="radio" name="genero" id="mujer">
             <label for="mujer">Mujer</label><br>
@@ -69,8 +69,9 @@
             <label for="otro">Otro</label><br>
         </div>
         <div>
+            <!-- se coloca el atributo-->
             <label for="materias">Materias</label><br>
-            <input type="checkbox" name="tipo[]" id="html">
+            <input type="checkbox" name="tipo[]" id="html" checked>
             <label for="html">HTML</label>
             <input type="checkbox" name="tipo[]" id="css">
             <label for="css">CSS</label>
@@ -85,7 +86,7 @@
         </div>
         <div>
             <label for="archivos">Archivos</label><br>
-            <input type="file" name="archivos" id="archivos" accept="image/.jpg,.png" multiple required>
+            <input type="file" name="archivos" id="archivos" accept=".jpg,.jpeg,.png" multiple required>
         </div>
         <div>
             <label for="contraseña">Contraseña</label><br>
@@ -96,7 +97,7 @@
             <input type="text" name="aprendiz" id="aprendiz" value="Eduard Joel Guerrero Rincón" readonly>
         </div>
         <div>
-            <button>Validar formulario</button>
+            <input type="submit" value="Validar formulario"/>
         </div>
         
     </form>
