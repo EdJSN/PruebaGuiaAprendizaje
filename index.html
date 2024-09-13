@@ -7,101 +7,114 @@
 </head>
 <body>
 
-    <form>
-        <div>
-            <label for="nombre">Nombre</label><br>
-            <input type="text" name="nombre" placeholder="Ingrese su nombre" minlength="3" maxlength="20" required pattern="[A-Za-z]+" id="nombre"><br>
-        </div>
-        <div>
-            <label for="apellido">Apellido</label><br>
-            <input type="text" name="apellido" placeholder="Ingrese su apellido" minlength="3" maxlength="30" required pattern="[a-z]+" id="apellido"><br>
-        </div>
-        <div>
-            <label for="color">Color</label><br>
-            <input type="color" placeholder="Seleccione su color favorito" required><br>
-        </div>
-        <div>
-            <label for="edad">Edad</label><br>
-            <input type="number" id="edad" name="edad" placeholder="Ingrese su edad" pattern="[0-9]" required min="1"><br>
-        </div>
-        <div>
-            <label for="numeros">Números</label><br>
-            <input type="text" name="numeros" id="numeros" placeholder="Inserte su número de contacto" minlength="10" maxlength="30" required pattern="\d+"><br>
-        </div>
-        <div>
-            <label for="positivos">Positivos</label><br>
-            <input type="number" name="positivos" placeholder="Solo números positivos" min="1" required pattern="^[0-9]+" id="positivos"><br>
-        </div>
-        <div>
-            <label for="maximo_minimo">Máximo - Mínimo</label><br>
-            <input type="number" name="maximo_minimo" min="10" max="20" required step="0.5" id="maximo_minimo" value="15"><br>
-        </div>
-        <div>
-            <label for="fecha_de_nacimiento">Fecha de nacimiento</label><br>
-            <input type="date" name="fecha_de_nacimiento" placeholder="Seleccione su fecha de nacimiento" required id="fecha_de_nacimiento"><br>
-        </div>
-        <div>
-            <label for="hora">Hora</label><br>
-            <input type="time" name="hora" placeholder="Ingrese la hora de registro" required id="hora"><br>
-        </div>
-        <div>
-            <label for="ciudad">Ciudad</label><br>
-            <select name="ciudad" id="ciudad" required>
-                <option value="bogota">Bogotá</option>
-                <option value="medellin">Medellín</option>
-                <option value="cali">Cali</option>
-                <option value="barranquilla">Barranquilla</option>
-                <option value="cartagena">Cartagena</option>
-                <option value="bucaramanga">Bucaramanga</option>
-                <option value="santa_marta">Santa Marta</option>
-                <option value="ibague">Ibagué</option>
-                <option value="monteria">Montería</option>
-                <option value="pereira">Pereira</option>
-            </select>
-        </div>
-        <div>
-            <label for="genero">Género</label><br>
-            <input type="radio" name="genero" id="hombre" checked>
-            <label for="hombre">Hombre</label><br>
-            <input type="radio" name="genero" id="mujer">
-            <label for="mujer">Mujer</label><br>
-            <input type="radio" name="genero" id="otro">
-            <label for="otro">Otro</label><br>
-        </div>
-        <div>
-            <!-- se coloca el atributo-->
-            <label for="materias">Materias</label><br>
-            <input type="checkbox" name="tipo[]" id="html" checked>
-            <label for="html">HTML</label>
-            <input type="checkbox" name="tipo[]" id="css">
-            <label for="css">CSS</label>
-            <input type="checkbox" name="tipo[]" id="js">
-            <label for="js">JS</label>
-            <input type="checkbox" name="tipo[]" id="java">
-            <label for="java">JAVA</label>
-            <input type="checkbox" name="tipo[]" id="python">
-            <label for="python">PHYTHON</label>
-            <input type="checkbox" name="tipo[]" id="php">
-            <label for="php">PHP</label>
-        </div>
-        <div>
-            <label for="archivos">Archivos</label><br>
-            <input type="file" name="archivos" id="archivos" accept=".jpg,.jpeg,.png" multiple required>
-        </div>
-        <div>
-            <label for="contraseña">Contraseña</label><br>
-            <input type="password" name="contraseña" id="contraseña">
-        </div>
-        <div>
-            <label for="aprendiz">Aprendiz</label><br>
-            <input type="text" name="aprendiz" id="aprendiz" value="Eduard Joel Guerrero Rincón" readonly>
-        </div>
-        <div>
-            <input type="submit" value="Validar formulario"/>
-        </div>
-        
+    <form action="index.html" method="get" enctype="multipart/form-data">
+       <div><hr>
+        <label for="nombre">Nombre</label><br>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su(s) nombre(s)"
+        required minlength="3" maxlength="30" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ]+$"
+        autocomplete="off">
+       </div>
+       <div><hr>
+        <label for="apellido">Apellido</label><br>
+        <input type="text" name="apellido" id="apellido" placeholder="Ingrese su(s) apellido(s)"
+        required minlength="3" maxlength="30" pattern="^[a-zñáéíóúü ]+$"
+        autocomplete="off">
+       </div>
+       <div><hr>
+        <label for="color">Seleccione su color favorito</label><br>
+        <input type="color" name="color" id="color" required>
+       </div>
+       <div><hr>
+        <label for="edad">Edad</label><br>
+        <input type="number" name="edad" id="edad" placeholder="Ingrese su edad"
+        required min="1" max="150" autocomplete="off">
+       </div>
+       <div><hr>
+        <label for="numeros">Números</label><br>
+        <input type="text" name="numeros" id="numeros" placeholder="Ingrese solo números"
+        required minlength="4" maxlength="10"
+        pattern="\d+" title="Solo se permiten números"
+        autocomplete="off">
+       </div>
+       <div><hr>
+        <label for="positivos">Positivos</label><br>
+        <input type="number" name="positivos" id="positivos" title="Ingrese solo números positivos"
+        required min="0" step="any" autocomplete="off">
+       </div>
+       <div><hr>
+        <label for="maximo_minimo">Máximo - Mínimo</label><br>
+        <input type="number" name="maximo_minimo" id="maximo_minimo" required
+        min="10" max="20" step="0.5" value="15" autocomplete="off">
+       </div>
+       <div><hr>
+        <label for="fecha_de_nacimiento">Fecha de nacimiento</label><br>
+        <input type="date" required>
+       </div>
+       <div><hr>
+        <label for="hora">Hora</label><br>
+        <input type="time" required>
+       </div>
+       <div><hr>
+        <label for="ciudad">Ciudad</label><br>
+        <select name="ciudad" id="ciudad" required>
+            <option value="bogota">Bogotá</option>
+            <option value="medellin">Medellín</option>
+            <option value="cali">Cali</option>
+            <option value="barranquilla">Barranquilla</option>
+            <option value="cartagena">Cartagena</option>
+            <option value="bucaramanga" selected>Bucaramanga</option>
+            <option value="santa_marta">Santa Marta</option>
+            <option value="ibague">Ibagué</option>
+            <option value="monteria">Montería</option>
+            <option value="pereira">Pereira</option>
+            <option value="otra">Otra</option>
+        </select>
+       </div>
+       <div><hr>
+        <label for="genero">Género</label><br>
+        <input type="radio" name="genero" id="hombre" checked>
+        <label for="hombre">Hombre</label><br>
+        <input type="radio" name="genero" id="mujer">
+        <label for="mujer">Mujer</label><br>
+        <input type="radio" name="genero" id="otro">
+        <label for="otro">Otro</label><br>
+       </div>
+       <div><hr>
+        <!--se agrega el atribito checked al input que se desea seleccionar por defecto-->
+        <label for="materias">Materias</label><br>
+        <input type="checkbox" name="materias[]" id="html" checked>
+        <label for="html">HTML</label><br>
+        <input type="checkbox" name="materias[]" id="css">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" name="materias[]" id="js">
+        <label for="js">JS</label><br>
+        <input type="checkbox" name="materias[]" id="java">
+        <label for="java">JAVA</label><br>
+        <input type="checkbox" name="materias[]" id="python">
+        <label for="python">PHYTHON</label><br>
+        <input type="checkbox" name="materias[]" id="php">
+        <label for="php">PHP</label><br>
+       </div>
+       <div><hr>
+        <label for="archivos">Archivos</label><br>
+        <input type="file" name="archivos" id="archivos" accept=".jpg,.png"
+        title="Solo archivos JPG y PNG son validos" multiple required>
+       </div>
+       <div><hr>
+        <label for="contraseña">Contraseña</label><br>
+        <input type="password" name="contraseña" id="contraseña" required
+        minlength="4" maxlength="10" autocomplete="off">
+       </div>
+       <div><hr>
+        <label for="aprendiz">Aprendiz</label><br>
+        <input type="text" name="aprendiz" id="aprendiz" value="Eduard Joel Guerrero Rincón"
+        required readonly>
+       </div>
+       <div><hr>
+       <!-- Botón pare enviar formulario-->
+        <input type="submit" value="Validar formulario">
+       </div><hr>
     </form>
-    
+
 </body>
 </html>
-
